@@ -28,9 +28,20 @@
 
 \newcommand\textstyleEmphasis[1]{\textit{#1}}
 
+\usepackage{braket}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\numberwithin{equation}{section}
+
 \begin{document}
 
-\title{\textbf{Mathematics of Quantum Mechanics} \\ Draft version - Barebone}
+\title{\textbf{Mathematics of Quantum Mechanics} \\ \textbf{\textcolor{red}{Draft version}} }
 \author{Mohamed Hage Hassan}
 \date{8 May 2017}
 \maketitle
@@ -48,11 +59,97 @@
 
 \clearpage
 
-\section{Introduction}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 
 This text is largely inspired from professor Ramamurti Shankar's Principles of Quantum Mechanics\cite{Principles of Quantum Mechanics}.
 
 \section{Linear Vector Spaces}
+
+Let's recall the basic definition of a vector space : 
+\medskip
+\iffalse
+\begin{theorem}
+Let $f$ be a function whose derivative exists in every point, then $f$ is 
+a continuous function.
+\end{theorem}
+\fi
+
+\theoremstyle{definition}
+\begin{definition}{\textbf{($\kappa$-vectorial space)}}\\
+  Let $X$ be a non empty set, which forms a $\kappa$-vectorial (linear) space, having :
+  \begin{itemize} \itemsep -4pt
+  \item An inner product :
+    \begin{align*}
+    f : X \times X \to X \\
+    (u, v) \to u + v
+    \end{align*}
+  \item An extern product :
+    \begin{align*}
+    \kappa \times X \to X \\ 
+    (\lambda , u) \to \lambda . u
+    \end{align*}
+  \end{itemize}
+
+  $X$ verifies the following rules :
+  \begin{itemize} \itemsep -4pt
+  \item[-] $\forall u, v \in X$, $u + v = v + u$ (associative).
+  \item[-] $\forall u, v, w \in X$, $ u + ( v + w) = ( u + v ) + w $.
+  \item[-] There exist a neutral element $0_X$, such as $0_X \in X$, $ u + 0_X = u, \forall u \in X$
+  \item[-] Each $u \in X$ has a symetric element $u' \in X$, such as $ u' + u = 0_X$ : $u'= -u$
+  \item[-] $\lambda.(\mu.u) = (\lambda \mu). u$, $\forall \lambda, \mu \in \kappa, u \in X$
+  \item[-] $\lambda.(u+v) = \lambda.u + \lambda.v$, $\forall \lambda \in \kappa$ and $u, v \in X $
+  \item[-] $ (\lambda + \mu).u = \lambda.u + \mu.u$, $\forall \lambda, \mu \in \kappa$ and $u \in X$  
+  \end{itemize} 
+\end{definition}
+
+In quantum mechanics, we shall use a similar concept of such vectorial spaces, deprived of concepts
+such as direction.. 
+\medskip
+\begin{definition}
+  Let $\varkappa$ be a linear vector space, and $\ket{1},\ket{2}, \ket{3},...\ket{V}..$ be elements of such
+  vector space.\\
+  We will see that such elements obeys laws similar to such of a $\kappa$-vectorial space.
+  \end{definition}
+
+\clearpage
+
+\textbf{\textcolor{red}{Draft :: All of the equations will be modified later on.}}
+
+Linear indepenence of a series of vectors :
+
+\begin{equation}
+  a_1 \ket{1} + a_2\ket{2} + a_3 \ket{3} + ... + a_n \ket{n} = \ket{0} = 0
+\end{equation}
+Can be expressed such as :
+\begin{equation}
+\sum^{n}_{i=1} a_i \ket{1} = \ket{0} 
+\end{equation}
+
+Expression of vectors in a \textbf{basis} :
+\begin{equation}
+\ket{V} = \sum^{n}_{i=1} \nu_i \ket{i} 
+\end{equation}
+
+Linear addition of 2 vectors :
+\begin{equation}
+\ket{V} = \sum^{n}_{i=1} \nu_i \ket{i} 
+\end{equation}
+and
+\begin{equation}
+\ket{W} = \sum^{n}_{i=1} \omega_i \ket{i} 
+\end{equation}
+
+\begin{equation}
+\ket{V} + \ket{W}  = \sum^{n}_{i=1} \nu_i \ket{i} + \sum^{n}_{i=1} \omega_i \ket{i} = \sum^{n}_{i=1} (\omega_i + \nu_i) \ket{i}
+ \end{equation}
+
+Linear superposition :
+\begin{align*}
+    \braket{a W + b Z | V} = \braket{V | a W + b Z}^{*} 
+  \end{align*}
+
+
 
 \clearpage
 
