@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{graphics}
+
+\usepackage{xcolor}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{multirow}
+
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{0.7874in}
+\setlength\oddsidemargin{0.7874in}
+\setlength\textheight{10.118099in}
+\setlength\textwidth{6.6932993in}
+\setlength\footskip{0.0cm}
+\setlength\headheight{0cm}
+\setlength\headsep{0cm}
+
+\newcommand\textstyleEmphasis[1]{\textit{#1}}
+
+\begin{document}
+
+\title{\textbf{Mathematics of Quantum Mechanics}}
+\author{Mohamed Hage Hassan}
+\date
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+  
+\end{abstract}
+
+\vskip 9.5cm
+\begin{center} \textbf{Institut Polytechnique de Grenoble} \end{center}
+
+\clearpage
+\tableofcontents
+
+\clearpage
+
+
+
+
+\end{document}
